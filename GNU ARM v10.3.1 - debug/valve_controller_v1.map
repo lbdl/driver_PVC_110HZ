@@ -9,7 +9,7 @@ Archive member included to satisfy reference by file (symbol)
 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/softfp/libgcc.a(_arm_fixdfsi.o)
                               ./src/main_single_oversampling_16bit.o (__aeabi_d2iz)
 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/softfp/libgcc.a(unwind-arm.o)
-                              ./CMSIS/EFR32MG22/startup_efr32mg22.o (__aeabi_unwind_cpp_pr0)
+                              ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o (__aeabi_unwind_cpp_pr0)
 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/softfp/libgcc.a(libunwind.o)
                               /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/softfp/libgcc.a(unwind-arm.o) (restore_core_regs)
 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/softfp/libgcc.a(pr-support.o)
@@ -61,9 +61,9 @@ Discarded input sections
  .data          0x0000000000000000        0x0 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/crt0.o
  .bss           0x0000000000000000        0x0 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/crt0.o
  .ARM.extab     0x0000000000000000        0x0 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/crt0.o
- .data          0x0000000000000000        0x0 ./CMSIS/EFR32MG22/startup_efr32mg22.o
- .bss           0x0000000000000000        0x0 ./CMSIS/EFR32MG22/startup_efr32mg22.o
- .ARM.extab     0x0000000000000000        0x0 ./CMSIS/EFR32MG22/startup_efr32mg22.o
+ .data          0x0000000000000000        0x0 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
+ .bss           0x0000000000000000        0x0 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
+ .ARM.extab     0x0000000000000000        0x0 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
  .group         0x0000000000000000        0xc ./CMSIS/EFR32MG22/system_efr32mg22.o
  .group         0x0000000000000000        0xc ./CMSIS/EFR32MG22/system_efr32mg22.o
  .group         0x0000000000000000        0xc ./CMSIS/EFR32MG22/system_efr32mg22.o
@@ -953,6 +953,171 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x267 ./emlib/em_iadc.o
  .debug_macro   0x0000000000000000      0x122 ./emlib/em_iadc.o
  .debug_macro   0x0000000000000000      0x16d ./emlib/em_iadc.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .group         0x0000000000000000        0xc ./emlib/em_letimer.o
+ .text          0x0000000000000000        0x0 ./emlib/em_letimer.o
+ .data          0x0000000000000000        0x0 ./emlib/em_letimer.o
+ .bss           0x0000000000000000        0x0 ./emlib/em_letimer.o
+ .text.LETIMER_IntClear
+                0x0000000000000000       0x22 ./emlib/em_letimer.o
+ .text.regSync  0x0000000000000000       0x26 ./emlib/em_letimer.o
+ .text.LETIMER_CompareGet
+                0x0000000000000000       0x4a ./emlib/em_letimer.o
+ .text.LETIMER_CounterGet
+                0x0000000000000000       0x1c ./emlib/em_letimer.o
+ .text.LETIMER_CounterSet
+                0x0000000000000000       0x20 ./emlib/em_letimer.o
+ .text.LETIMER_CompareSet
+                0x0000000000000000       0x4e ./emlib/em_letimer.o
+ .text.LETIMER_Enable
+                0x0000000000000000       0x30 ./emlib/em_letimer.o
+ .text.LETIMER_Init
+                0x0000000000000000      0x102 ./emlib/em_letimer.o
+ .text.LETIMER_RepeatGet
+                0x0000000000000000       0x56 ./emlib/em_letimer.o
+ .text.LETIMER_RepeatSet
+                0x0000000000000000       0x5a ./emlib/em_letimer.o
+ .text.LETIMER_Reset
+                0x0000000000000000       0x66 ./emlib/em_letimer.o
+ .text.LETIMER_SyncWait
+                0x0000000000000000       0x26 ./emlib/em_letimer.o
+ .text.LETIMER_TopSet
+                0x0000000000000000       0x3a ./emlib/em_letimer.o
+ .text.LETIMER_TopGet
+                0x0000000000000000       0x1c ./emlib/em_letimer.o
+ .debug_info    0x0000000000000000      0xa57 ./emlib/em_letimer.o
+ .debug_abbrev  0x0000000000000000      0x21d ./emlib/em_letimer.o
+ .debug_loc     0x0000000000000000      0x49c ./emlib/em_letimer.o
+ .debug_aranges
+                0x0000000000000000       0x88 ./emlib/em_letimer.o
+ .debug_ranges  0x0000000000000000       0x78 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x2d8 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0xa6c ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x22 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x765 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x22 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x56 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x51 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x103 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x6a ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x1df ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x1c ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x29 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x110 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x17ea ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x5e ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x16 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0xe4f ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x12bd ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x87c ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x300 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x34 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x304 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x456 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x4a1 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x156 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x764 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x363 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x14f4 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x10 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x997 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x2b9a ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0xcb2 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x4c ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x15b8 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x210a ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x53c ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0xfe5 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x955 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x34 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x308 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x6a7 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x618 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x91e ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x1b1b ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x76b ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x8f3 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x14b5 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x688 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x141b ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x15c0 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x1384 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000     0x155c ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x2d0 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0xecf ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x10 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x94 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0xfc ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x307 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0x16 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000       0xd6 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x267 ./emlib/em_letimer.o
+ .debug_macro   0x0000000000000000      0x122 ./emlib/em_letimer.o
+ .debug_line    0x0000000000000000      0xb0a ./emlib/em_letimer.o
+ .debug_str     0x0000000000000000    0xc9c0d ./emlib/em_letimer.o
+ .comment       0x0000000000000000       0x4a ./emlib/em_letimer.o
+ .debug_frame   0x0000000000000000      0x21c ./emlib/em_letimer.o
+ .ARM.attributes
+                0x0000000000000000       0x38 ./emlib/em_letimer.o
  .group         0x0000000000000000        0xc ./emlib/em_prs.o
  .group         0x0000000000000000        0xc ./emlib/em_prs.o
  .group         0x0000000000000000        0xc ./emlib/em_prs.o
@@ -1533,13 +1698,14 @@ Linker script and memory map
 LOAD /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/softfp/crti.o
 LOAD /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/softfp/crtbegin.o
 LOAD /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/crt0.o
-LOAD ./CMSIS/EFR32MG22/startup_efr32mg22.o
+LOAD ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
 LOAD ./CMSIS/EFR32MG22/system_efr32mg22.o
 LOAD ./emlib/em_cmu.o
 LOAD ./emlib/em_core.o
 LOAD ./emlib/em_emu.o
 LOAD ./emlib/em_gpio.o
 LOAD ./emlib/em_iadc.o
+LOAD ./emlib/em_letimer.o
 LOAD ./emlib/em_prs.o
 LOAD ./emlib/em_system.o
 LOAD ./src/main_single_oversampling_16bit.o
@@ -1562,7 +1728,7 @@ LOAD /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/g
 
 .text           0x0000000000000000     0x55c0
  *(.vectors)
- .vectors       0x0000000000000000      0x7c0 ./CMSIS/EFR32MG22/startup_efr32mg22.o
+ .vectors       0x0000000000000000      0x7c0 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
                 0x0000000000000000                __Vectors
                 0x00000000000007c0                __Vectors_End = .
                 0x00000000000007c0                __Vectors_Size = (__Vectors_End - __Vectors)
@@ -1573,7 +1739,7 @@ LOAD /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/g
                 0x0000000000000800                _stack_init
                 0x0000000000000808                _mainCRTStartup
                 0x0000000000000808                _start
- .text          0x000000000000087c       0x58 ./CMSIS/EFR32MG22/startup_efr32mg22.o
+ .text          0x000000000000087c       0x58 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
                 0x000000000000087c                Reset_Handler
                 0x00000000000008be                HardFault_Handler
                 0x00000000000008c0                TIMER2_IRQHandler
@@ -2075,7 +2241,7 @@ LOAD /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/g
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
  .ARM.exidx     0x00000000000055d8        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/crt0.o
                                          0x10 (size before relaxing)
- .ARM.exidx     0x00000000000055e0       0x10 ./CMSIS/EFR32MG22/startup_efr32mg22.o
+ .ARM.exidx     0x00000000000055e0       0x10 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
                                          0x18 (size before relaxing)
  .ARM.exidx     0x00000000000055f0       0x78 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main+fp/softfp/libgcc.a(unwind-arm.o)
                                          0xd8 (size before relaxing)
@@ -2175,12 +2341,12 @@ LOAD /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/g
                 0x00000000200000f8                end = __end__
                 0x00000000200000f8                _end = __end__
  *(.heap*)
- .heap          0x00000000200000f8      0xc00 ./CMSIS/EFR32MG22/startup_efr32mg22.o
+ .heap          0x00000000200000f8      0xc00 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
                 0x0000000020000cf8                __HeapLimit = .
 
 .stack_dummy    0x0000000020000200      0x400
  *(.stack*)
- .stack         0x0000000020000200      0x400 ./CMSIS/EFR32MG22/startup_efr32mg22.o
+ .stack         0x0000000020000200      0x400 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
                 0x0000000020008000                __StackTop = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020007c00                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
                 0x0000000020008000                PROVIDE (__stack = __StackTop)
@@ -2198,7 +2364,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000000000000058       0x20 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/crt0.o
  .ARM.attributes
-                0x0000000000000078       0x24 ./CMSIS/EFR32MG22/startup_efr32mg22.o
+                0x0000000000000078       0x24 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
  .ARM.attributes
                 0x000000000000009c       0x38 ./CMSIS/EFR32MG22/system_efr32mg22.o
  .ARM.attributes
@@ -2270,20 +2436,20 @@ LOAD linker stubs
  .comment       0x0000000000000049       0x4a ./emlib/em_system.o
  .comment       0x0000000000000049       0x4a ./src/main_single_oversampling_16bit.o
 
-.debug_line     0x0000000000000000     0x87c0
- .debug_line    0x0000000000000000       0xce ./CMSIS/EFR32MG22/startup_efr32mg22.o
- .debug_line    0x00000000000000ce      0x997 ./CMSIS/EFR32MG22/system_efr32mg22.o
- .debug_line    0x0000000000000a65     0x20fa ./emlib/em_cmu.o
- .debug_line    0x0000000000002b5f      0xd72 ./emlib/em_core.o
- .debug_line    0x00000000000038d1     0x11ba ./emlib/em_emu.o
- .debug_line    0x0000000000004a8b      0xb47 ./emlib/em_gpio.o
- .debug_line    0x00000000000055d2     0x1394 ./emlib/em_iadc.o
- .debug_line    0x0000000000006966      0xad1 ./emlib/em_prs.o
- .debug_line    0x0000000000007437      0x8d6 ./emlib/em_system.o
- .debug_line    0x0000000000007d0d      0xab3 ./src/main_single_oversampling_16bit.o
+.debug_line     0x0000000000000000     0x856c
+ .debug_line    0x0000000000000000       0x88 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
+ .debug_line    0x0000000000000088      0x951 ./CMSIS/EFR32MG22/system_efr32mg22.o
+ .debug_line    0x00000000000009d9     0x20c4 ./emlib/em_cmu.o
+ .debug_line    0x0000000000002a9d      0xd3c ./emlib/em_core.o
+ .debug_line    0x00000000000037d9     0x1184 ./emlib/em_emu.o
+ .debug_line    0x000000000000495d      0xb11 ./emlib/em_gpio.o
+ .debug_line    0x000000000000546e     0x135e ./emlib/em_iadc.o
+ .debug_line    0x00000000000067cc      0xa9b ./emlib/em_prs.o
+ .debug_line    0x0000000000007267      0x8a0 ./emlib/em_system.o
+ .debug_line    0x0000000000007b07      0xa65 ./src/main_single_oversampling_16bit.o
 
 .debug_info     0x0000000000000000    0x191d7
- .debug_info    0x0000000000000000       0x26 ./CMSIS/EFR32MG22/startup_efr32mg22.o
+ .debug_info    0x0000000000000000       0x26 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
  .debug_info    0x0000000000000026     0x1f5d ./CMSIS/EFR32MG22/system_efr32mg22.o
  .debug_info    0x0000000000001f83     0x6020 ./emlib/em_cmu.o
  .debug_info    0x0000000000007fa3      0xff7 ./emlib/em_core.o
@@ -2295,7 +2461,7 @@ LOAD linker stubs
  .debug_info    0x0000000000014eab     0x432c ./src/main_single_oversampling_16bit.o
 
 .debug_abbrev   0x0000000000000000     0x17b1
- .debug_abbrev  0x0000000000000000       0x14 ./CMSIS/EFR32MG22/startup_efr32mg22.o
+ .debug_abbrev  0x0000000000000000       0x14 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
  .debug_abbrev  0x0000000000000014      0x28f ./CMSIS/EFR32MG22/system_efr32mg22.o
  .debug_abbrev  0x00000000000002a3      0x3d5 ./emlib/em_cmu.o
  .debug_abbrev  0x0000000000000678      0x260 ./emlib/em_core.o
@@ -2308,7 +2474,7 @@ LOAD linker stubs
 
 .debug_aranges  0x0000000000000000      0x7d8
  .debug_aranges
-                0x0000000000000000       0x20 ./CMSIS/EFR32MG22/startup_efr32mg22.o
+                0x0000000000000000       0x20 ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
  .debug_aranges
                 0x0000000000000020       0x98 ./CMSIS/EFR32MG22/system_efr32mg22.o
  .debug_aranges
@@ -2328,26 +2494,26 @@ LOAD linker stubs
  .debug_aranges
                 0x0000000000000758       0x80 ./src/main_single_oversampling_16bit.o
 
-.debug_str      0x0000000000000000    0xd5b59
- .debug_str     0x0000000000000000       0xf3 ./CMSIS/EFR32MG22/startup_efr32mg22.o
- .debug_str     0x00000000000000f3    0xc485b ./CMSIS/EFR32MG22/system_efr32mg22.o
-                                      0xc5165 (size before relaxing)
- .debug_str     0x00000000000c494e     0xaa18 ./emlib/em_cmu.o
-                                      0xcf378 (size before relaxing)
- .debug_str     0x00000000000cf366      0x357 ./emlib/em_core.o
-                                      0xc51e8 (size before relaxing)
- .debug_str     0x00000000000cf6bd      0xaa6 ./emlib/em_emu.o
-                                      0xcd7ba (size before relaxing)
- .debug_str     0x00000000000d0163      0x20e ./emlib/em_gpio.o
-                                      0xc636b (size before relaxing)
- .debug_str     0x00000000000d0371     0x2150 ./emlib/em_iadc.o
-                                      0xcc307 (size before relaxing)
- .debug_str     0x00000000000d24c1     0x314e ./emlib/em_prs.o
-                                      0xc9157 (size before relaxing)
- .debug_str     0x00000000000d560f      0x22c ./emlib/em_system.o
-                                      0xc5193 (size before relaxing)
- .debug_str     0x00000000000d583b      0x31e ./src/main_single_oversampling_16bit.o
-                                      0xcdbb0 (size before relaxing)
+.debug_str      0x0000000000000000    0xd5891
+ .debug_str     0x0000000000000000       0x8f ./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o
+ .debug_str     0x000000000000008f    0xc4815 ./CMSIS/EFR32MG22/system_efr32mg22.o
+                                      0xc5101 (size before relaxing)
+ .debug_str     0x00000000000c48a4     0xa9e2 ./emlib/em_cmu.o
+                                      0xcf324 (size before relaxing)
+ .debug_str     0x00000000000cf286      0x321 ./emlib/em_core.o
+                                      0xc5194 (size before relaxing)
+ .debug_str     0x00000000000cf5a7      0xa70 ./emlib/em_emu.o
+                                      0xcd766 (size before relaxing)
+ .debug_str     0x00000000000d0017      0x1d8 ./emlib/em_gpio.o
+                                      0xc6317 (size before relaxing)
+ .debug_str     0x00000000000d01ef     0x211a ./emlib/em_iadc.o
+                                      0xcc2b3 (size before relaxing)
+ .debug_str     0x00000000000d2309     0x3118 ./emlib/em_prs.o
+                                      0xc9103 (size before relaxing)
+ .debug_str     0x00000000000d5421      0x1f6 ./emlib/em_system.o
+                                      0xc513f (size before relaxing)
+ .debug_str     0x00000000000d5617      0x27a ./src/main_single_oversampling_16bit.o
+                                      0xcdb62 (size before relaxing)
 
 .debug_loc      0x0000000000000000     0x433a
  .debug_loc     0x0000000000000000      0x4ac ./CMSIS/EFR32MG22/system_efr32mg22.o
