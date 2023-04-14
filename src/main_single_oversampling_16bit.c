@@ -44,6 +44,7 @@
 #include "em_gpio.h"
 #include "em_prs.h"
 
+#include "em_letimer.h"
 
 /*******************************************************************************
  *******************************   DEFINES   ***********************************
@@ -102,6 +103,24 @@ const float MIN_RANGE = 3.2;
 const float MIN_PWM = 0;
 const float MAX_PWM = 70;
 
+// PWM
+// Desired frequency in Hz
+#define OUT_FREQ 1
+
+// Duty cycle percentage
+#define DUTY_CYCLE 30
+
+/**************************************************************************//**
+ * @brief
+ *    CMU initialization
+ *****************************************************************************/
+void initCmu(void) {
+  CMU_ClockEnable(cmuClock_LETIMER0, true);
+  CMU_ClockEnable(cmuClock_GPIO, true);
+  CMU_ClockEnable(cmuClock_PRS, true);
+  CMU_ClockEnable(cmuClock_IADC0, true);
+}
+
 /**************************************************************************//**
  * @brief  GPIO Initializer
  *****************************************************************************/
@@ -114,7 +133,6 @@ void initGPIO(void)
    * on/off based on demand from the peripherals; CMU_ClockEnable() is a dummy
    * function for EFR32xG21 for library consistency/compatibility.
    */
-  CMU_ClockEnable(cmuClock_GPIO, true);
    
   // Configure GPIO as output, will indicate when conversions are being performed
   GPIO_PinModeSet(GPIO_OUTPUT_0_PORT, GPIO_OUTPUT_0_PIN, gpioModePushPull, 0);
@@ -126,7 +144,6 @@ void initGPIO(void)
 void initPRS(void)
 {
   // Enable PRS clock
-  CMU_ClockEnable(cmuClock_PRS, true);
 
   // Connect PRS Async channel to ADC single complete signal
   PRS_SourceAsyncSignalSet(IADC_PRS_CH, PRS_ASYNC_CH_CTRL_SOURCESEL_IADC0,
@@ -148,7 +165,6 @@ void initIADC(void)
   IADC_SingleInput_t initSingleInput = IADC_SINGLEINPUT_DEFAULT;
 
   // Enable IADC clock
-  CMU_ClockEnable(cmuClock_IADC0, true);
 
   // Reset IADC to reset configuration in case it has been modified
   IADC_reset(IADC0);
@@ -243,6 +259,50 @@ int handle_pwm(int v_sample) {
   return 1;
 }
 
+/**************************************************************************//**
+ * @brief Clock initialisation
+ *****************************************************************************/
+void initClockForPWM(void)
+{
+  CMU_LFXOInit_TypeDef lfxoInit = CMU_LFXOINIT_DEFAULT;
+
+  // Select LFXO for the LETIMER
+  CMU_LFXOInit(&lfxoInit);
+  CMU_ClockSelectSet(cmuClock_EM23GRPACLK, cmuSelect_LFXO);
+}
+
+/**************************************************************************//**
+ * @brief LETIMER initialisation
+ *****************************************************************************/
+void initLetimer(void)
+{
+  LETIMER_Init_TypeDef letimerInit = LETIMER_INIT_DEFAULT;
+
+  // Calculate the top value (frequency) based on clock source
+  uint32_t topValue = CMU_ClockFreqGet(cmuClock_LETIMER0) / OUT_FREQ;
+
+  // Reload top on underflow, PWM output, and run in free mode
+  letimerInit.comp0Top = true;
+  letimerInit.topValue = topValue;
+  letimerInit.ufoa0 = letimerUFOAPwm;
+  letimerInit.repMode = letimerRepeatFree;
+
+  // Enable LETIMER0 output0 on PA6 we want PA04 for the EFR32BG22 board
+  GPIO->LETIMERROUTE[0].ROUTEEN = GPIO_LETIMER_ROUTEEN_OUT0PEN;
+ // GPIO->LETIMERROUTE[0].OUT0ROUTE = \
+ //     (gpioPortA << _GPIO_LETIMER_OUT0ROUTE_PORT_SHIFT) \
+ //     | (6 << _GPIO_LETIMER_OUT0ROUTE_PIN_SHIFT);
+   GPIO->LETIMERROUTE[0].OUT0ROUTE = \
+        (gpioPortA << _GPIO_LETIMER_OUT0ROUTE_PORT_SHIFT) \
+        | (4 << _GPIO_LETIMER_OUT0ROUTE_PIN_SHIFT);
+
+
+  // Set COMP0 to control duty cycle
+  LETIMER_CompareSet(LETIMER0, 0, topValue * DUTY_CYCLE / 100);
+
+  // Initialize LETIMER
+  LETIMER_Init(LETIMER0, &letimerInit);
+}
 
 /**************************************************************************//**
  * @brief  Main function
@@ -250,6 +310,8 @@ int handle_pwm(int v_sample) {
 int main(void)
 {
   CHIP_Init();
+
+  initCmu();
 
   // Initialize GPIO
   initGPIO();
@@ -260,6 +322,7 @@ int main(void)
   // Initialize the IADC
   initIADC();
 
+  initLetimer();
 #ifdef EM2DEBUG
 #if (EM2DEBUG == 1)
   // Enable debug connectivity in EM2

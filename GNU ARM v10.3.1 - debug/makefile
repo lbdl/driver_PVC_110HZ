@@ -10,7 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include src/subdir.mk
 -include emlib/subdir.mk
--include CMSIS/EFR32MG22/subdir.mk
+-include CMSIS/EFR32BG22/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -45,7 +45,7 @@ main-build: valve_controller_v1.axf
 valve_controller_v1.axf: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU ARM C Linker'
-	arm-none-eabi-gcc -g3 -gdwarf-2 -mcpu=cortex-m33 -mthumb -T "valve_controller_v1.ld" -Xlinker --gc-sections -Xlinker -Map="valve_controller_v1.map" -mfpu=fpv5-sp-d16 -mfloat-abi=softfp --specs=nano.specs -o valve_controller_v1.axf "./CMSIS/EFR32MG22/startup_gcc_efr32mg22.o" "./CMSIS/EFR32MG22/system_efr32mg22.o" "./emlib/em_cmu.o" "./emlib/em_core.o" "./emlib/em_emu.o" "./emlib/em_gpio.o" "./emlib/em_iadc.o" "./emlib/em_letimer.o" "./emlib/em_prs.o" "./emlib/em_system.o" "./src/main_single_oversampling_16bit.o" -Wl,--start-group -lgcc -lc -lnosys -Wl,--end-group
+	arm-none-eabi-gcc -g3 -gdwarf-2 -mcpu=cortex-m33 -mthumb -T "valve_controller_v1.ld" -Xlinker --gc-sections -Xlinker -Map="valve_controller_v1.map" -mfpu=fpv5-sp-d16 -mfloat-abi=softfp --specs=nano.specs -o valve_controller_v1.axf "./CMSIS/EFR32BG22/startup_efr32bg22.o" "./CMSIS/EFR32BG22/system_efr32bg22.o" "./emlib/em_cmu.o" "./emlib/em_core.o" "./emlib/em_emu.o" "./emlib/em_gpio.o" "./emlib/em_iadc.o" "./emlib/em_letimer.o" "./emlib/em_prs.o" "./emlib/em_system.o" "./src/main_single_oversampling_16bit.o" -Wl,--start-group -lgcc -lc -lnosys -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

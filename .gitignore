@@ -1,0 +1,8 @@
+*.o
+CMSIS/
+*.d
+*.bin
+*.hex
+*.map
+*.s37
+*.axf
